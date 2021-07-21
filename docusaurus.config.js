@@ -13,27 +13,52 @@ module.exports = {
     organizationName: 'DiscordVote', // Usually your GitHub org/user name.
     projectName: 'Docs', // Usually your repo name.
     themeConfig: {
+
+        colorMode: {
+            defaultMode: 'dark',
+            disableSwitch: true,
+            respectPrefersColorScheme: false,
+        },
+
         navbar: {
             title: 'DiscordVote Docs',
+            hideOnScroll: true,
             logo: {
-                alt: 'Logo',
+                alt: 'My Site Logo',
                 src: 'img/discordvote.png',
             },
             items: [
+                // left
                 {
-                    type: 'doc',
-                    docId: 'intro',
+                    label: 'Get Started',
                     position: 'left',
-                    label: 'Tutorial',
+                    items: [
+                        {
+                            label: 'Installation',
+                            to: '/docs/installation/',
+                        },
+                        {
+                            label: 'React',
+                            to: '/docs/quick-start/react/',
+                        },
+                        {
+                            label: 'Style Guide',
+                            to: '/docs/style-guide/',
+                        },
+                        {
+                            label: 'Examples',
+                            to: '/docs/examples/',
+                        },
+                    ],
                 },
-                {to: '/blog', label: 'Blog', position: 'left'},
                 {
-                    href: 'https://github.com/DiscordVote/Docs',
-                    label: 'GitHub',
-                    position: 'right',
+                    label: 'Documentation',
+                    position: 'left',
+                    to: 'docs/',
                 },
             ],
         },
+
         footer: {
             style: 'dark',
             links: [
@@ -66,10 +91,6 @@ module.exports = {
                 {
                     title: 'More',
                     items: [
-                        {
-                            label: 'Blog',
-                            to: '/blog',
-                        },
                         {
                             label: 'GitHub',
                             href: 'https://github.com/DiscordVote',
