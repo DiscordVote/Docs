@@ -3,8 +3,7 @@ const exec = require("child_process").exec;
 const express = require("express");
 const app = express(); // create express app
 
-app.use('/', express.static('build/'))
-app.use('/img', express.static('build/img'))
+app.use(express.static('build/'))
 
 app.get("/*", (req, res) => {
     res.sendFile(path.join(__dirname, "build", "index.html"));
