@@ -1,130 +1,114 @@
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-
-/** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-    title: 'DiscordVotes Docs',
-    tagline: 'Dinosaurs are cool',
-    url: 'https://your-docusaurus-test-site.com',
-    baseUrl: '/',
-    onBrokenLinks: 'throw',
-    onBrokenMarkdownLinks: 'warn',
-    favicon: 'img/favicon.ico',
-    organizationName: 'DiscordVote', // Usually your GitHub org/user name.
-    projectName: 'Docs', // Usually your repo name.
-    themeConfig: {
+  title: 'My Site',
+  tagline: 'The tagline of my site',
+  url: 'https://your-docusaurus-test-site.com',
+  baseUrl: '/',
+  favicon: 'img/favicon.ico',
+  organizationName: 'facebook', // Usually your GitHub org/user name.
+  projectName: 'docusaurus', // Usually your repo name.
+  themeConfig: {
+    colorMode: {
+      // "light" | "dark"
+      defaultMode: 'dark',
 
-        colorMode: {
-            defaultMode: 'dark',
-            disableSwitch: true,
-            respectPrefersColorScheme: false,
+      // Hides the switch in the navbar
+      // Useful if you want to support a single color mode
+      disableSwitch: true,
+},
+    navbar: {
+      title: 'My Site',
+      logo: {
+        alt: 'My Site Logo',
+        src: 'img/logo.svg',
+      },
+      items: [
+        {
+          to: 'docs/',
+          activeBasePath: 'docs',
+          label: 'Docs',
+          position: 'left',
         },
-
-        navbar: {
-            title: 'DiscordVote Docs',
-            hideOnScroll: true,
-            logo: {
-                alt: 'My Site Logo',
-                src: 'img/discordvote.png',
-            },
-            items: [
-                // left
-                {
-                    label: 'Get Started',
-                    position: 'left',
-                    items: [
-                        {
-                            label: 'Installation',
-                            to: '/docs/installation/',
-                        },
-                        {
-                            label: 'React',
-                            to: '/docs/quick-start/react/',
-                        },
-                        {
-                            label: 'Style Guide',
-                            to: '/docs/style-guide/',
-                        },
-                        {
-                            label: 'Examples',
-                            to: '/docs/examples/',
-                        },
-                    ],
-                },
-                {
-                    label: 'Documentation',
-                    position: 'left',
-                    to: 'docs/',
-                },
-            ],
+        {to: 'blog', label: 'Blog', position: 'left'},
+        {
+          href: 'https://github.com/facebook/docusaurus',
+          label: 'GitHub',
+          position: 'right',
         },
-
-        footer: {
-            style: 'dark',
-            links: [
-                {
-                    title: 'Docs',
-                    items: [
-                        {
-                            label: 'Tutorial',
-                            to: '/docs/intro',
-                        },
-                    ],
-                },
-                {
-                    title: 'Community',
-                    items: [
-                        {
-                            label: 'Website',
-                            href: 'https://discordvote.net',
-                        },
-                        {
-                            label: 'Discord',
-                            href: 'https://discordapp.com/invite/docusaurus',
-                        },
-                        {
-                            label: 'Status',
-                            href: 'https://status.discordvote.net',
-                        },
-                    ],
-                },
-                {
-                    title: 'More',
-                    items: [
-                        {
-                            label: 'GitHub',
-                            href: 'https://github.com/DiscordVote',
-                        },
-                    ],
-                },
-            ],
-            copyright: `Copyright © ${new Date().getFullYear()} DiscordVote. Built with Docusaurus.`,
-        },
-        prism: {
-            theme: lightCodeTheme,
-            darkTheme: darkCodeTheme,
-        },
+      ],
     },
-    presets: [
-        [
-            '@docusaurus/preset-classic',
+    footer: {
+      style: 'dark',
+      links: [
+        {
+          title: 'Docs',
+          items: [
             {
-                docs: {
-                    sidebarPath: require.resolve('./sidebars.js'),
-                    // Please change this to your repo.
-                    editUrl:
-                        'https://github.com/facebook/docusaurus/edit/master/website/',
-                },
-                blog: {
-                    showReadingTime: true,
-                    // Please change this to your repo.
-                    editUrl:
-                        'https://github.com/facebook/docusaurus/edit/master/website/blog/',
-                },
-                theme: {
-                    customCss: require.resolve('./src/css/custom.css'),
-                },
+              label: 'Style Guide',
+              to: 'docs/',
             },
-        ],
+            {
+              label: 'Second Doc',
+              to: 'docs/doc2/',
+            },
+          ],
+        },
+        {
+          title: 'Community',
+          items: [
+            {
+              label: 'Stack Overflow',
+              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+            },
+            {
+              label: 'Discord',
+              href: 'https://discordapp.com/invite/docusaurus',
+            },
+            {
+              label: 'Twitter',
+              href: 'https://twitter.com/docusaurus',
+            },
+          ],
+        },
+        {
+          title: 'More',
+          items: [
+            {
+              label: 'Blog',
+              to: 'blog',
+            },
+            {
+              label: 'GitHub',
+              href: 'https://github.com/facebook/docusaurus',
+            },
+          ],
+        },
+      ],
+      copyright: `Copyright © ${new Date().getFullYear()} DiscordVote. Built with Docusaurus.`,
+    },
+  },
+  presets: [
+    [
+      '@docusaurus/preset-classic',
+      {
+        docs: {
+          // It is recommended to set document id as docs home page (`docs/` path).
+          routeBasePath: '/',
+          homePageId: 'home-page',
+          sidebarPath: require.resolve('./sidebars.js'),
+          // Please change this to your repo.
+          editUrl:
+            'https://github.com/facebook/docusaurus/edit/master/website/',
+        },
+        blog: {
+          showReadingTime: true,
+          // Please change this to your repo.
+          editUrl:
+            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+        },
+        theme: {
+          customCss: require.resolve('./src/css/custom.css'),
+        },
+      },
     ],
+  ],
 };
