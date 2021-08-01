@@ -1,7 +1,7 @@
 module.exports = {
   someSidebar: {
     'Getting started': ['home-page'],
-    'API': ['api-home', 'api-versions', 'api-bot']
+    'API': ['api-home', 'api-versions', 'api-bot', 'api-server']
 
   },
 };
