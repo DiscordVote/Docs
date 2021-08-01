@@ -1,11 +1,11 @@
 module.exports = {
-  title: 'My Site',
-  tagline: 'The tagline of my site',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'DiscordVote Docs',
+  tagline: 'Official Docs of DiscordVote.net',
+  url: 'https://docs.discordvote.net',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'DiscordVote', // Usually your GitHub org/user name.
+  projectName: 'Docs', // Usually your repo name.
   themeConfig: {
     colorMode: {
       // "light" | "dark"
@@ -16,21 +16,14 @@ module.exports = {
       disableSwitch: true,
 },
     navbar: {
-      title: 'My Site',
+      title: 'DiscordVote',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Logo',
         src: 'img/logo.svg',
       },
       items: [
         {
-          to: 'docs/',
-          activeBasePath: 'docs',
-          label: 'Docs',
-          position: 'left',
-        },
-        {to: 'blog', label: 'Blog', position: 'left'},
-        {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/DiscordVote/Docs',
           label: 'GitHub',
           position: 'right',
         },
@@ -78,7 +71,7 @@ module.exports = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/DiscordVote/Docs',
             },
           ],
         },
@@ -97,7 +90,7 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
+            'https://github.com/DiscordVote/Docs/edit/master',
         },
         blog: {
           showReadingTime: true,
